@@ -1,3 +1,4 @@
+import os
 import cv2
 import pandas as pd
 import trackpy as tp
@@ -5,11 +6,15 @@ import numpy as np
 from tqdm import tqdm
 
 # ------------------ CONFIG ------------------
-video_path = "input/StorageChamber_supershort_for_test.mp4"
-output_path = "output/tracked_output_with_IDs.mp4"
+video_path = "input/StorageChamber_short.mp4"
+base_name = os.path.splitext(os.path.basename(video_path))[0]
 
-CONF_THRESH = 0.6
+CONF_THRESH = 0.5
 NMS_THRESH = 0.4
+MEMORY = 5
+
+output_name = f"{base_name}_tracked_output_with_IDs_confidence{CONF_THRESH}_memory{MEMORY}.mp4"
+output_path = os.path.join("output", output_name)
 
 # YOLOv4 weights and config
 weights_path = "yolov4_1ob_best.weights"
@@ -66,7 +71,7 @@ df = pd.DataFrame(all_detections)
 # ------------------ Linking ------------------
 # Search range should be roughly the max distance a droplet moves between frames
 search_range = 10  # pixels, adjust based on droplet speed
-linked_df = tp.link_df(df, search_range=search_range, memory=5)  # memory=5 allows temporary disappearance
+linked_df = tp.link_df(df, search_range=search_range, memory=MEMORY)  # for example memory=5 allows temporary disappearance
 
 # ------------------ Write tracked video ------------------
 cap = cv2.VideoCapture(video_path)
