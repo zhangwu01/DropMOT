@@ -6,7 +6,7 @@
 
 
 ## Step 1
-Download pre-trained weights (yolov4_1ob_best.weights) of the YOLOv4 model for droplet detection from https://zenodo.org/records/10938306
+Download weights (yolov4_1ob_best.weights) of the pre-trained YOLOv4 model for droplet detection from https://zenodo.org/records/10938306
 
 ## Step 2
 Create a virtual environment
