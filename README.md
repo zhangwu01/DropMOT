@@ -1,5 +1,5 @@
 # DropMOT
-**Multi-object detection and tracking for microfluidic droplet videos using pre-trained YOLOv4 and tracking algorithms**
+**Multi-object detection and tracking for microfluidic droplet videos using pre-trained YOLOv4 deep learning models and tracking algorithms**
 
 **This repository will continue to be updated as new methods, improvements, and bug fixes for droplet detection and tracking are developed.**
 
