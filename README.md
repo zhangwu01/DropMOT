@@ -1,8 +1,6 @@
 # DropMOT
 **Multi-object detection and tracking for microfluidic droplet videos using pre-trained YOLOv4 deep learning models and tracking algorithms**
 
-**This repository will continue to be updated as new methods, improvements, and bug fixes for droplet detection and tracking are developed.**
-
 ---
 
 ## Tracking backends
@@ -26,9 +24,8 @@ The original `trackpy` pipeline buffers **all** detections before linking them, 
 
 ### Step 1 – Download YOLOv4 weights
 ```
-https://zenodo.org/records/10938306   →  yolov4_1ob_best.weights
+Download weights (yolov4_1ob_best.weights) of the pre-trained YOLOv4 model for droplet detection from https://zenodo.org/records/10938306. Place the weights file in the repo root.
 ```
-Place the weights file in the repo root.
 
 ### Step 2 – Create environment
 ```bash
@@ -84,7 +81,7 @@ conda deactivate
 ## File overview
 ```
 DropMOT/
-├── yolov4_bytetrack.py   # ✨ main pipeline (YOLOv4 + ByteTracker)
+├── yolov4_bytetrack.py   # main pipeline (YOLOv4 + ByteTracker)
 ├── byte_tracker.py       # ByteTracker + KalmanBoxTracker implementation
 ├── yolov4_trackpy.py     # original TrackPy pipeline (kept for reference)
 ├── yolov4_1ob.cfg        # YOLOv4 architecture config
