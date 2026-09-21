@@ -8,7 +8,7 @@
 | Script | Tracker | Architecture | Pros |
 |---|---|---|---|
 | `yolov4_trackpy.py` | TrackPy | Two-pass (offline) | Simple setup |
-| `yolov4_bytetrack.py` ✨ | **ByteTracker** | Online (frame-by-frame) | Better ID stability, handles occlusion, Kalman prediction |
+| `yolov4_bytetrack.py` | **ByteTracker** | Online (frame-by-frame) | Better ID stability, handles occlusion, Kalman prediction |
 
 ### Why ByteTracker?
 
