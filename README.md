@@ -23,9 +23,7 @@ The original `trackpy` pipeline buffers **all** detections before linking them, 
 ## Setup
 
 ### Step 1 – Download YOLOv4 weights
-```
 Download weights (yolov4_1ob_best.weights) of the pre-trained YOLOv4 model for droplet detection from https://zenodo.org/records/10938306. Place the weights file in the repo root.
-```
 
 ### Step 2 – Create environment
 ```bash
