@@ -16,3 +16,5 @@ dependencies:
   - pip
   - pip:
       - fitter
+      - filterpy      # Kalman filter (required by ByteTracker)
+      - lap           # fast linear assignment (optional speedup)
