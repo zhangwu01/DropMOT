@@ -231,7 +231,7 @@ class ByteTracker:
         self.min_hits    = min_hits
         self.iou_thresh  = iou_thresh
 
-        self.trackers:   list[KalmanBoxTracker] = []
+        self.trackers = []  # list of KalmanBoxTracker
         self.frame_count = 0
         KalmanBoxTracker.count = 0
 

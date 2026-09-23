@@ -89,7 +89,7 @@ def parse_args():
 # Colour palette (HSV → BGR, one colour per track ID)
 # ---------------------------------------------------------------------------
 
-def _id_to_colour(track_id: int) -> tuple[int, int, int]:
+def _id_to_colour(track_id: int):
     hue = (track_id * 37) % 180           # spread IDs across the hue wheel
     hsv = np.uint8([[[hue, 220, 220]]])
     bgr = cv2.cvtColor(hsv, cv2.COLOR_HSV2BGR)[0][0]
@@ -176,12 +176,12 @@ def main():
     )
 
     # Trajectory buffers: track_id → deque of (cx,cy)
-    trails: dict[int, deque] = {}
+    trails = {}  # track_id -> deque of (cx, cy)
 
     # ---- Stats ----
     total_dets = 0
     total_trks = 0
-    id_set: set[int] = set()
+    id_set = set()
 
     print(f"\nTracking {args.video}  →  {args.output}")
     print(f"  high_thresh={args.conf}  low_thresh={args.low}  "
