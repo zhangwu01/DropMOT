@@ -35,7 +35,7 @@ conda activate yolo
 
 **ByteTracker (recommended)**
 ```bash
-python yolov4_bytetrack.py
+python yolov4_bytetrack.py --video input/your_video_filename
 ```
 
 With custom settings:
