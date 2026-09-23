@@ -1,2 +1,3 @@
 .DS_Store
 *.weights
+__pycache__/
