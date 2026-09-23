@@ -52,7 +52,7 @@ python yolov4_bytetrack.py \
 
 **Original TrackPy (legacy)**
 ```bash
-python yolov4_trackpy.py
+python yolov4_trackpy.py --video input/your_video_filename
 ```
 
 ### Step 4 – Deactivate environment

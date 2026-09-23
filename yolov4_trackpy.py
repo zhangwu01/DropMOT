@@ -4,9 +4,15 @@ import pandas as pd
 import trackpy as tp
 import numpy as np
 from tqdm import tqdm
+import argparse
 
 # ------------------ CONFIG ------------------
-video_path = "input/StorageChamber_short.mp4"
+parser = argparse.ArgumentParser(description="DropMOT — YOLOv4 + TrackPy")
+parser.add_argument("--video", default="input/StorageChamber_supershort.mp4",
+                    help="Path to input video")
+args = parser.parse_args()
+
+video_path = args.video
 base_name = os.path.splitext(os.path.basename(video_path))[0]
 
 CONF_THRESH = 0.5
