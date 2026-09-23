@@ -13,7 +13,7 @@ CONF_THRESH = 0.5
 NMS_THRESH = 0.4
 MEMORY = 5
 
-output_name = f"{base_name}_tracked_output_with_IDs_confidence{CONF_THRESH}_memory{MEMORY}.mp4"
+output_name = f"{base_name}_trackpy_confidence{CONF_THRESH}_memory{MEMORY}.mp4"
 output_path = os.path.join("output", output_name)
 
 # YOLOv4 weights and config
